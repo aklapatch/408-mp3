@@ -1,0 +1,11 @@
+    
+java -classpath .:../machine:../filesys:../threads:../userprog:/usr/local/java/jre/lib/rt.jar Nachos $*
+./nachos -M 0 0 -x ../test/tc2 > test.7.out
+
+
+jdb -classpath .;..\machine;..\filesys;..\threads;..\userprog Nachos -M 0 0 -x ../test/tc2 
+
+
+stop at MemManager.makeFreeFrame()
+
+run Nachos -M 0 0 -x ../test/tc2
